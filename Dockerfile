@@ -14,15 +14,14 @@ RUN set -eux; \
   echo Done
 
 ENV DEVPISERVER_HOST=0.0.0.0
-ENV DEVPISERVER_NO_ROOT_PYPI=true
-ENV DEVPISERVER_PORT=8080
+ENV DEVPISERVER_PORT=3141
 ENV DEVPISERVER_RESTRICT_MODIFY=
 ENV DEVPISERVER_SERVERDIR=/usr/app/src/serverdir
 
 RUN set -eux; \
-  devpi-init --no-root-pypi; \
+  devpi-init; \
   echo Done
 
-EXPOSE 8080
+EXPOSE 3141
 
 CMD ["devpi-server"]
