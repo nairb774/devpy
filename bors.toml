@@ -1,2 +1,2 @@
-status = ["docker-image-ci"]
+status = ["docker-image-ci %"]
 delete_merged_branches = true
